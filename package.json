@@ -1,5 +1,5 @@
 {
-  "name": "goit-react-hw-01-components",
+  "name": "travel-timetable",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -19,6 +19,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-loader-spinner": "^5.3.4",
+    "react-router-dom": "^6.14.1",
     "react-toastify": "^9.1.2"
   },
   "devDependencies": {
@@ -35,7 +36,7 @@
     "eslint-plugin-react": "^7.30.0",
     "eslint-plugin-react-hooks": "^4.5.0",
     "prettier": "^2.6.2",
-    "typescript": "^4.6.3",
+    "typescript": "^5.1.6",
     "vite": "^2.9.9",
     "vite-tsconfig-paths": "^3.5.0"
   }

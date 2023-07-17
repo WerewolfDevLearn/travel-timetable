@@ -1,35 +1,80 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import 'normalize.css';
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
+    <>
+      <header></header>
+      <h1>Weather Forecast</h1>
+      <img src='' alt='seacrch icon' />
+      <input type='text'></input>
+      <ul>
+        <li>
+          <img src='' alt='city' />
+          <h3>City</h3>
+          <p>date start - date end</p>
+        </li>
+        <li>
+          <img src='' alt='city' />
+          <h3>City</h3>
+          <p>date start - date end</p>
+        </li>
+        <li>
+          <img src='' alt='city' />
+          <h3>City</h3>
+          <p>date start - date end</p>
+        </li>
+        <li>
+          <img src='' alt='city' />
+          <h3>City</h3>
+          <p>date start - date end</p>
+        </li>
+        <button>ADD trip</button>
+      </ul>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <h2>Week</h2>
+        <ul>
+          <li>
+            <img src='' alt='weather' />
+            <p>daytemp/nighttemp</p>
+          </li>
+          <li>
+            <img src='' alt='weather' />
+            <p>daytemp/nighttemp</p>
+          </li>
+          <li>
+            <img src='' alt='weather' />
+            <p>daytemp/nighttemp</p>
+          </li>
+          <li>
+            <img src='' alt='weather' />
+            <p>daytemp/nighttemp</p>
+          </li>
+          <li>
+            <img src='' alt='weather' />
+            <p>daytemp/nighttemp</p>
+          </li>
+          <li>
+            <img src='' alt='weather' />
+            <p>daytemp/nighttemp</p>
+          </li>
+          <li>
+            <img src='' alt='weather' />
+            <p>daytemp/nighttemp</p>
+          </li>
+        </ul>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+      <div>
+        <h3>Day of the week</h3>
+        <img src='' alt='weather icon' />
+        <h4>City</h4>
+        <ul>
+          <li>days</li>
+          <li>hours</li>
+          <li>minuts</li>
+          <li>seconds</li>
+        </ul>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+    </>
+  );
 }
 
-export default App
+export default App;
