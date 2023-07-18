@@ -1,0 +1,33 @@
+.add-trip-form-heading {
+  border-bottom: 1px solid #8d8d8d;
+}
+
+.add-trip-form {
+  width: 620px;
+  padding: 25px;
+}
+
+.add-trip-select {
+  width: 100%;
+}
+input[type='text'].date-input,
+input[type='date'].date-input {
+  box-sizing: border-box;
+  border: 1px solid #8d8d8d;
+  padding: 2px;
+  margin: 5px 0px;
+  width: 100%;
+  position: relative;
+}
+input[type='text'].date-input::after,
+input[type='date'].date-input::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  right: 5px;
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+  background-image: url('../assets/Calendar_icon_2.svg');
+  background-size: cover;
+}

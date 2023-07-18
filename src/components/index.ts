@@ -7,7 +7,7 @@ import { PrivateRoutes } from './Routes/PrivateRoutes';
 import { PubliceRoutes } from './Routes/PubliceRoutes';
 import { TripList } from './TripList/TripList';
 import { Filter } from './Filter/Filter';
-import { ContactForm, LoginForm, RegisterForm, UpdateContactForm } from './Forms';
+import { AddTripForm, LoginForm, RegisterForm } from './Forms';
 export {
   AppHeader,
   Loader,
@@ -16,10 +16,9 @@ export {
   Section,
   PrivateRoutes,
   PubliceRoutes,
-  ContactForm,
+  AddTripForm,
   LoginForm,
   RegisterForm,
-  UpdateContactForm,
   TripList,
   Filter,
 };

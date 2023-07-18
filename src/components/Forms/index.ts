@@ -1,6 +1,5 @@
-import { ContactForm } from './ContactForm';
+import { AddTripForm } from './AddTripForm';
 import { LoginForm } from './LoginForm';
 import { RegisterForm } from './RegisterForm';
-import { UpdateContactForm } from './UpdateContactForm';
 
-export { ContactForm, LoginForm, RegisterForm, UpdateContactForm };
+export { AddTripForm, LoginForm, RegisterForm };

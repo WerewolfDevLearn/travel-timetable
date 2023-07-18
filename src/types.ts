@@ -16,3 +16,8 @@ export interface ITripList {
 export interface ITripProps {
   trip: ITrip;
 }
+export interface ModaLProps {
+  onCloseModal(): void;
+  children: JSX.Element[] | JSX.Element;
+  isOpen: boolean;
+}

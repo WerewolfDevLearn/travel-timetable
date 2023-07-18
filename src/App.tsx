@@ -1,32 +1,32 @@
-import { lazy, Suspense, useEffect } from 'react';
-import { Route, Routes } from 'react-router-dom';
-import { Section, PrivateRoutes, PubliceRoutes, Loader } from './components';
-import { ErrorPage, HomePage, LoginPage, RegisterPage, ContactsPage } from './pages';
-import routes from './routes';
-import 'normalize.css';
+// import { Suspense } from 'react';
+// import { Route, Routes } from 'react-router-dom';
+// import { Section, PrivateRoutes, PubliceRoutes, Loader } from './components';
+// import { ErrorPage, HomePage, LoginPage, RegisterPage, TripsPage } from './pages';
+// import routes from './routes';
+import { AddTripForm } from './components';
+
 function App() {
-  return (
-    <Suspense fallback={<Loader />}>
-      <Routes>
-        <Route path={routes.home} element={<Section />}>
-          <Route element={<PubliceRoutes />}>
-            <Route index element={<HomePage />} />
-            <Route path={routes.login} element={<LoginPage />} />
-            <Route path={routes.register} element={<RegisterPage />} />
-          </Route>
-          <Route element={<PrivateRoutes />}>
-            <Route path={routes.contacts} element={<ContactsPage />} />
-          </Route>
-          <Route path='*' element={<ErrorPage />} />
-        </Route>
-      </Routes>
-    </Suspense>
-  );
+  return <AddTripForm />;
 }
 
 export default App;
-{
-  /* <>
+//  <Suspense fallback={<Loader />}>
+//     <Routes>
+//       <Route path={routes.home} element={<Section />}>
+//         <Route element={<PubliceRoutes />}>
+//           <Route index element={<HomePage />} />
+//           <Route path={routes.login} element={<LoginPage />} />
+//           <Route path={routes.register} element={<RegisterPage />} />
+//         </Route>
+//         <Route element={<PrivateRoutes />}>
+//           <Route path={routes.trips} element={<TripsPage />} />
+//         </Route>
+//         <Route path='*' element={<ErrorPage />} />
+//       </Route>
+//     </Routes>
+//   </Suspense>
+// {
+/* <>
       <header></header>
       <h1>Weather Forecast</h1>
       <img src='' alt='seacrch icon' />
@@ -100,4 +100,4 @@ export default App;
       </div>
     </>
   ); */
-}
+// }
