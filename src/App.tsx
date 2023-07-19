@@ -3,10 +3,13 @@
 // import { Section, PrivateRoutes, PubliceRoutes, Loader } from './components';
 // import { ErrorPage, HomePage, LoginPage, RegisterPage, TripsPage } from './pages';
 // import routes from './routes';
-import { AddTripForm } from './components';
+import { AddTripForm, DatePicker } from './components';
 
 function App() {
-  return <AddTripForm />;
+  return (
+    // <AddTripForm />
+    <DatePicker />
+  );
 }
 
 export default App;

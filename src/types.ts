@@ -21,3 +21,11 @@ export interface ModaLProps {
   children: JSX.Element[] | JSX.Element;
   isOpen: boolean;
 }
+export interface IDay {
+  year: number;
+  month: number;
+  day: number;
+  currentDate: boolean;
+  currentMonth: boolean;
+  id: string;
+}

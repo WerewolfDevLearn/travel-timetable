@@ -1,0 +1,105 @@
+.InputLabel {
+  font-family: 'Roboto';
+}
+.InputDate {
+  width: 100%;
+  position: relative;
+}
+
+.InputDate::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+.Wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.InputWraper {
+  position: relative;
+  display: flex;
+  width: 500px;
+}
+.InputWraper::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  width: 20px;
+  height: 20px;
+  background-image: url('../../assets/Calendar_icon_2.svg');
+  background-size: contain;
+}
+.CalendarWrapper {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  width: 300px;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 10px 10px 45px -4px rgba(0, 0, 0, 0.75);
+}
+.CalendarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.WeeksDays {
+  height: 30px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 10px;
+  margin-bottom: 8px;
+}
+.WeeksDay {
+  line-height: 1.2;
+  font-size: 15px;
+
+  text-align: center;
+  align-self: center;
+}
+.MonthDate {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.DayNumber {
+  font-size: 15px;
+  line-height: 1.2;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.CurrentDay {
+  display: block;
+  font-weight: 800;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.OtherDay {
+  font-weight: 400;
+}
+
+.CurrentMonth {
+  font-weight: 600;
+}
+.OtherMonth {
+  font-weight: 200;
+  color: rgb(104, 104, 104);
+}
+.DayNumber:hover,
+.CurrentMonth:hover,
+.OtherMonth:hover,
+.CurrentDay:hover {
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  border-color: blue;
+}

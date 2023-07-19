@@ -8,6 +8,7 @@ import { PubliceRoutes } from './Routes/PubliceRoutes';
 import { TripList } from './TripList/TripList';
 import { Filter } from './Filter/Filter';
 import { AddTripForm, LoginForm, RegisterForm } from './Forms';
+import { DatePicker } from './DatePicker/DatePicker';
 export {
   AppHeader,
   Loader,
@@ -21,4 +22,5 @@ export {
   RegisterForm,
   TripList,
   Filter,
+  DatePicker,
 };

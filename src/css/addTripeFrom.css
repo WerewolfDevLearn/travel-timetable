@@ -6,28 +6,36 @@
   width: 620px;
   padding: 25px;
 }
-
+.add-trip-form-lable {
+  font-family: 'Roboto';
+}
 .add-trip-select {
   width: 100%;
 }
+.add-trip-select option {
+  font-family: 'Roboto';
+}
 input[type='text'].date-input,
 input[type='date'].date-input {
-  box-sizing: border-box;
   border: 1px solid #8d8d8d;
-  padding: 2px;
-  margin: 5px 0px;
+  padding: 0px;
   width: 100%;
+}
+.input-decor-container {
   position: relative;
 }
-input[type='text'].date-input::after,
-input[type='date'].date-input::after {
+.input-decor-container::after {
   content: '';
   display: inline-block;
   position: absolute;
-  right: 5px;
+  top: 1px;
+  right: 2px;
   width: 18px;
   height: 18px;
-  background-color: #fff;
+  background-color: #ffffff;
   background-image: url('../assets/Calendar_icon_2.svg');
   background-size: cover;
+}
+.input-decor-container:hover .input-decor-container::after {
+  display: none;
 }
