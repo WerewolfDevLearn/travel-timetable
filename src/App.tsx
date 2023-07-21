@@ -1,8 +1,8 @@
 import { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 // import { Section, PrivateRoutes, PubliceRoutes, Loader } from './components';
-import { Loader, Section } from './components';
-import { ErrorPage, HomePage, LoginPage, RegisterPage, TripsPage } from './pages';
+import { Loader, Section } from './components/index';
+import { ErrorPage, HomePage, LoginPage, RegisterPage, TripsPage } from './pages/index';
 import routes from './routes';
 
 function App() {

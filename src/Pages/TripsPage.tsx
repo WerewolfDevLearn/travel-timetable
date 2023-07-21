@@ -1,4 +1,4 @@
-import { TripList, Filter, Loader, WeatherWidget } from '../components';
+import { TripList, Filter, WeatherWidget } from '../components/index';
 // import PagesSTL from './Pages.module.css';
 // import usePHBState from '../redux/selectors';
 
