@@ -15,6 +15,11 @@ export const Navigation = () => {
           Login
         </NavLink>
       </li>
+      <li key='NavigationtoTrips' className='nav-listItem'>
+        <NavLink to={routes.trips} className='nav-link'>
+          Trips
+        </NavLink>
+      </li>
     </ul>
   );
 };
