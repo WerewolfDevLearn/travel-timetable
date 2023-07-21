@@ -1,4 +1,4 @@
-export function HomePage() {
+export default function HomePage() {
   return (
     <>
       <h1 className='home-page-heading'>Welcome!</h1>

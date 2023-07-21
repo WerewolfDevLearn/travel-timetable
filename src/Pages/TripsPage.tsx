@@ -8,7 +8,7 @@ import { WeatherWidget } from '../components/WeatherWidget/WeatherWidget';
 
 import { ITrip } from '../types';
 
-export function TripsPage() {
+export default function TripsPage() {
   const filter = '';
   const items: ITrip[] | [] = [];
   // const { filter } = usePHBState();
