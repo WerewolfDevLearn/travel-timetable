@@ -2,7 +2,7 @@ import { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Section } from './components/Section/Section';
 import { Loader } from './components/Loader/Loader';
-import HomePage from './pages/HomePage';
+import HomePage from '../src/pages/HomePage';
 import ErrorPage from './pages/ErrorPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
