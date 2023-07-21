@@ -8,5 +8,5 @@ export function PubliceRoutes() {
   // user: { profile },
   // } = usePHBState();
 
-  return name ? <Navigate to={routes.contacts} /> : <Outlet />;
+  return name ? <Navigate to={routes.trips} /> : <Outlet />;
 }

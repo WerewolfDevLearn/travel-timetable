@@ -1,4 +1,6 @@
-import { TripList, Filter, WeatherWidget } from '../components/index';
+import { TripList } from '../components/TripList/TripList';
+import { Filter } from '../components/Filter/Filter';
+import { WeatherWidget } from '../components/WeatherWidget/WeatherWidget';
 // import PagesSTL from './Pages.module.css';
 // import usePHBState from '../redux/selectors';
 
