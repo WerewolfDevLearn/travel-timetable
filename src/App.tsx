@@ -1,33 +1,28 @@
-// import { Suspense } from 'react';
-// import { Route, Routes } from 'react-router-dom';
+import { Suspense } from 'react';
+import { Route, Routes } from 'react-router-dom';
 // import { Section, PrivateRoutes, PubliceRoutes, Loader } from './components';
-// import { ErrorPage, HomePage, LoginPage, RegisterPage, TripsPage } from './pages';
-// import routes from './routes';
-import { AddTripForm, DatePicker } from './components';
+import { Loader, Section } from './components';
+import { ErrorPage, HomePage, LoginPage, RegisterPage, TripsPage } from './pages';
+import routes from './routes';
 
 function App() {
   return (
-    // <AddTripForm />
-    <DatePicker labelTex='start' />
+    <Suspense fallback={<Loader />}>
+      <Routes>
+        <Route path={routes.home} element={<Section />}>
+          <Route index element={<HomePage />} />
+          <Route path={routes.login} element={<LoginPage />} />
+          <Route path={routes.register} element={<RegisterPage />} />
+          <Route path={routes.trips} element={<TripsPage />} />
+          <Route path='*' element={<ErrorPage />} />
+        </Route>
+      </Routes>
+    </Suspense>
   );
 }
 
 export default App;
-//  <Suspense fallback={<Loader />}>
-//     <Routes>
-//       <Route path={routes.home} element={<Section />}>
-//         <Route element={<PubliceRoutes />}>
-//           <Route index element={<HomePage />} />
-//           <Route path={routes.login} element={<LoginPage />} />
-//           <Route path={routes.register} element={<RegisterPage />} />
-//         </Route>
-//         <Route element={<PrivateRoutes />}>
-//           <Route path={routes.trips} element={<TripsPage />} />
-//         </Route>
-//         <Route path='*' element={<ErrorPage />} />
-//       </Route>
-//     </Routes>
-//   </Suspense>
+
 // {
 /* <>
       <header></header>

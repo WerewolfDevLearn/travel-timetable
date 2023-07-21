@@ -10,7 +10,7 @@ html {
 body {
   font-family: 'Roboto', sans-serif;
   letter-spacing: 0.02em;
-  background-color: #fff;
+  background-color: #ffffff;
   color: #000;
 }
 
@@ -49,4 +49,15 @@ address {
 }
 input {
   font-family: 'Roboto';
+}
+.container {
+  box-sizing: border-box;
+  max-width: 1980px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 50px;
+}
+.gird-container {
+  display: grid;
+  grid-template-columns: 950px 300px 670px;
 }

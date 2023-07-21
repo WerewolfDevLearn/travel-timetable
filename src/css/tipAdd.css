@@ -1,0 +1,17 @@
+.tipAdd-container {
+  width: 245px;
+  height: 225px;
+  padding-top: 40vh;
+}
+.tipAdd-button {
+  display: block;
+  width: 245px;
+  height: 225px;
+  background-color: #f2f4f8;
+  border: none;
+  font-size: 22px;
+}
+.tipAdd-button::before {
+  content: '+';
+  display: block;
+}

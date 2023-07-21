@@ -1,8 +1,9 @@
-import { ContactForm, TripList, Loader, Filter } from '../components';
-import PagesSTL from './Pages.module.css';
+import { TripList, Filter, Loader, WeatherWidget } from '../components';
+// import PagesSTL from './Pages.module.css';
 // import usePHBState from '../redux/selectors';
 
 // import { useGetContatsQuery } from '../redux/contacts/contactsApi';
+
 import { ITrip } from '../types';
 
 export function TripsPage() {
@@ -23,14 +24,25 @@ export function TripsPage() {
 
   const visibleItems = getVisibleItems(items);
   return (
-    <div className={PagesSTL.container}>
-      <h2 className={PagesSTL.heading}>PhoneBook</h2>
-      <ContactForm visibleContacts={visibleItems} />
-      <h2 className={PagesSTL.heading}>Contacts</h2>
-      <TripList visibleTrips={visibleItems} />
-      {/* {items.length > 1 && <Filter />}
-      {items.length > 0 && !error && !isLoading && <TripList visibleTrips={visibleContacts} />}
-      {isLoading && <Loader />} */}
+    <div className='gird-container'>
+      <div className='trip-section-wrapper'>
+        <h1 className='trip-section-heading'>
+          Weather <span className='heading-decor'>Forecast</span>
+        </h1>
+        <Filter />
+        <TripList visibleTrips={visibleItems} />
+      </div>
+      <div className='tipAdd-container'>
+        <button type='button' className='tipAdd-button'>
+          Add trip
+        </button>
+      </div>
+      <div className='weather-widget'>
+        <WeatherWidget />
+      </div>
+
+      {/* {items.length > 0 && !error && !isLoading && <TripList visibleTrips={visibleContacts} />} */}
+      {/* {isLoading && <Loader />} */}
     </div>
   );
 }

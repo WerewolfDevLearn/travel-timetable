@@ -3,7 +3,7 @@ import { DivloaderContainer } from '../Styled-Components/Styled-Components.style
 export function Loader() {
   return (
     <DivloaderContainer>
-      <FallingLines color='#404040' width='100' visible={true} />
+      <FallingLines color='#8C8C8C' width='100' visible={true} />
     </DivloaderContainer>
   );
 }

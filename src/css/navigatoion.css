@@ -1,0 +1,20 @@
+.nav-list {
+  display: flex;
+  width: 150px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-bottom: 10px;
+  gap: 15px;
+  line-height: 1.2;
+}
+.nav-link {
+  border: 1px solid #8c8c8c;
+  border-radius: 3px;
+  padding: 5px;
+  color: black;
+}
+.nav-link:hover {
+  color: white;
+  background-color: #1890ff;
+  border-color: #1890ff;
+}

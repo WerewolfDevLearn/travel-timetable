@@ -1,0 +1,15 @@
+.trip-section-heading {
+  font-size: 30px;
+  font-weight: 400;
+  margin-top: 55px;
+  margin-bottom: 70px;
+  margin-left: 50px;
+}
+
+.heading-decor {
+  font-weight: 600;
+}
+.weather-widget {
+  background-color: blue;
+  height: 100vh;
+}

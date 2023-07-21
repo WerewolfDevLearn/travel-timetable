@@ -2,21 +2,23 @@
 // import usePHBState from '../../redux/selectors';
 // import { useDispatch } from 'react-redux';
 
+import { useState } from 'react';
+
 export function Filter() {
-  // const { filter } = usePHBState();
-  // const dispatch = useDispatch();
+  const [filter, setFilte] = useState('');
+
   return (
     <div className='filter'>
-      <label className='filter-label'>
-        Find contact by name:
+      <div className='filter-decor'>
         <input
           type='text'
-          // value={filter}
-          // onChange={(e) => dispatch(ContactFilter(e.target.value))}
+          value={filter}
+          onChange={(e) => setFilte(e.target.value)}
           name='filter'
           className='filter-input'
+          placeholder='Search your trip'
         />
-      </label>
+      </div>
     </div>
   );
 }

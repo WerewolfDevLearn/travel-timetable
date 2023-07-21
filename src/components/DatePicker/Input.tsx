@@ -12,11 +12,12 @@ export default function InputDate({ inputValue, labelTex, onClickHandler }: IPro
       </label>
       <div className='input-decor'>
         <input
+          id='inputdate'
           className='input-field'
           type='text'
           autoComplete='off'
           value={inputValue}
-          placeholder={inputValue}
+          placeholder='Select a date'
           onClick={onClickHandler}
           name='start-date'
           onChange={() => console.log('yes')}

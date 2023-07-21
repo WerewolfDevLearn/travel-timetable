@@ -12,10 +12,11 @@ export function AddTripForm() {
         <option value='London'>London</option>
         <option value='New York'>New York</option>
       </select>
+
       <DatePicker labelTex='Start date' key='dateIn' />
       <DatePicker labelTex='End date' key='dateOut' />
-
-      <button>Cancel</button>
+      <div className='button-wrapper'></div>
+      <button type='button'>Cancel</button>
       <button type='submit'>Save</button>
     </form>
   );

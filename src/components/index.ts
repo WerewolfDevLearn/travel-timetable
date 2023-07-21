@@ -9,6 +9,7 @@ import { TripList } from './TripList/TripList';
 import { Filter } from './Filter/Filter';
 import { AddTripForm, LoginForm, RegisterForm } from './Forms';
 import { DatePicker } from './DatePicker/DatePicker';
+import { WeatherWidget } from './WeatherWidget/WeatherWidget';
 export {
   AppHeader,
   Loader,
@@ -23,4 +24,5 @@ export {
   TripList,
   Filter,
   DatePicker,
+  WeatherWidget,
 };

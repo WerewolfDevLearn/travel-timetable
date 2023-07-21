@@ -33,3 +33,12 @@ export interface IDayProps {
   day: IDay;
   // setDate: (day: IDay) => void;
 }
+export interface ILogin {
+  email: string;
+  password: string;
+}
+export interface ModaLProps {
+  onCloseModal(): void;
+  children: JSX.Element[] | JSX.Element;
+  isOpen: boolean;
+}
