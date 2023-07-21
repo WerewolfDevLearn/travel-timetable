@@ -8,7 +8,7 @@ import { AddTripForm, DatePicker } from './components';
 function App() {
   return (
     // <AddTripForm />
-    <DatePicker />
+    <DatePicker labelTex='start' />
   );
 }
 

@@ -29,3 +29,7 @@ export interface IDay {
   currentMonth: boolean;
   id: string;
 }
+export interface IDayProps {
+  day: IDay;
+  // setDate: (day: IDay) => void;
+}

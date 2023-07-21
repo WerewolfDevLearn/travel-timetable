@@ -1,4 +1,4 @@
-import { IDay } from '../../types';
+import { IDay } from '../../../types';
 import { nanoid } from 'nanoid';
 export function arrFill(year: number, month: number): IDay[] {
   const firstDayofMonth = new Date(year, month - 1, 1).getDay();
