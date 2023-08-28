@@ -1,10 +1,12 @@
-import { IDay } from '../../../types';
 import { nanoid } from 'nanoid';
+
+import { IDay } from '../../../types';
+
 export function arrFill(year: number, month: number): IDay[] {
-  const firstDayofMonth = new Date(year, month - 1, 1).getDay();
-  const lastDateofMonth = new Date(year, month, 0).getDate();
-  const lastDayofMonth = new Date(year, month - 1, lastDateofMonth).getDay();
-  const lastDateofLastMonth = new Date(year, month - 1, 0).getDate();
+  const firstDayofMonth = new Date(year, month - 1, 1).getDay(); // week day
+  const lastDateofMonth = new Date(year, month, 0).getDate(); // date
+  const lastDayofMonth = new Date(year, month - 1, lastDateofMonth).getDay(); // week day
+  const lastDateofLastMonth = new Date(year, month - 1, 0).getDate(); // date
   const arrOfDaysofMonth: IDay[] = [];
   //   const arr: number[] = [];
 
@@ -16,7 +18,7 @@ export function arrFill(year: number, month: number): IDay[] {
       day: lastDateofLastMonth - i + 1,
       currentDate: false,
       currentMonth: false,
-      id: nanoid(),
+      id: nanoid()
     };
     arrOfDaysofMonth.push(day);
     // arr.push(lastDateofLastMonth - i + 1);
@@ -33,7 +35,7 @@ export function arrFill(year: number, month: number): IDay[] {
       day: i,
       currentDate: currentDay,
       currentMonth: true,
-      id: nanoid(),
+      id: nanoid()
     };
     arrOfDaysofMonth.push(day);
     // arr.push(i);
@@ -45,7 +47,7 @@ export function arrFill(year: number, month: number): IDay[] {
       day: i - lastDayofMonth + 1,
       currentDate: false,
       currentMonth: false,
-      id: nanoid(),
+      id: nanoid()
     };
     arrOfDaysofMonth.push(day);
     // arr.push(i - lastDayofMonth + 1);
