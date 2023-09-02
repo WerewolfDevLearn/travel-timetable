@@ -16,11 +16,7 @@ export interface ITripList {
 export interface ITripProps {
   trip: ITrip;
 }
-export interface ModaLProps {
-  onCloseModal(): void;
-  children: JSX.Element[] | JSX.Element;
-  isOpen: boolean;
-}
+
 export interface IDay {
   year: number;
   month: number;
@@ -31,7 +27,6 @@ export interface IDay {
 }
 export interface IDayProps {
   day: IDay;
-  // setDate: (day: IDay) => void;
 }
 export interface ILogin {
   email: string;
@@ -40,5 +35,4 @@ export interface ILogin {
 export interface ModaLProps {
   onCloseModal(): void;
   children: JSX.Element[] | JSX.Element;
-  isOpen: boolean;
 }

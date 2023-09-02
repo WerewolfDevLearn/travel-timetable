@@ -1,4 +1,5 @@
 import axios from 'axios';
+
 import { ILogin } from '../types';
 
 axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
@@ -30,5 +31,5 @@ export const token = {
   },
   unset() {
     axios.defaults.headers.common.Authorization = '';
-  },
+  }
 };

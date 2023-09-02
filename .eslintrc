@@ -37,7 +37,9 @@
       "warn",
       {
         "endOfLine": "auto",
-        "singleQuote": true
+        "singleQuote": true,
+        "jsxSingleQuote": false,
+        "trailingComma": "all"
       }
     ],
     "quotes": ["error", "single"],
@@ -45,7 +47,7 @@
     "no-console": "warn",
     "semi": ["error", "always"],
     "space-before-function-paren": [
-      "error",
+      "warn",
       { "anonymous": "always", "named": "never", "asyncArrow": "always" }
     ],
     "import/order": [

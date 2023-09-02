@@ -8,15 +8,15 @@ export function Filter() {
   const [filter, setFilte] = useState('');
 
   return (
-    <div className='filter'>
-      <div className='filter-decor'>
+    <div className="filter">
+      <div className="filter-decor">
         <input
-          type='text'
+          type="text"
           value={filter}
           onChange={(e) => setFilte(e.target.value)}
-          name='filter'
-          className='filter-input'
-          placeholder='Search your trip'
+          name="filter"
+          className="filter-input"
+          placeholder="Search your trip"
         />
       </div>
     </div>

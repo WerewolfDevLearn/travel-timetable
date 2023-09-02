@@ -1,13 +1,16 @@
-import { IDay } from '../../types';
 import { useState } from 'react';
+import { IDay } from 'types';
+import Modal from 'components/Modal/Modal';
+
 import Calendar from './Calendar/Calendar';
 import InputDate from './Input';
-import Modal from '../Modal/Modal';
+
 import { DatepickerContext } from './DaypickerContext';
 interface IProps {
   labelTex: string;
+  forId: string;
 }
-export function DatePicker({ labelTex }: IProps) {
+export function DatePicker({ labelTex, forId }: IProps) {
   const [show, setShow] = useState(false);
   const [selectedDate, setSelectedDate] = useState<IDay>();
   const closeModal = () => {
@@ -24,12 +27,20 @@ export function DatePicker({ labelTex }: IProps) {
 
   return (
     <>
-      <DatepickerContext.Provider value={setSelectedDate}>
-        <div className='datepicker-wrapper'>
-          <InputDate inputValue={inputValue} onClickHandler={onClickHandler} labelTex={labelTex} />
-          <Modal isOpen={show} onCloseModal={closeModal}>
-            {<Calendar />}
-          </Modal>
+      <DatepickerContext.Provider value={{ setDate: setSelectedDate, closeModal }}>
+        <div className="datepicker-wrapper">
+          <InputDate
+            inputValue={inputValue}
+            onClickHandler={onClickHandler}
+            labelTex={labelTex}
+            forId={forId}
+          />
+
+          {show && (
+            <Modal onCloseModal={closeModal}>
+              <Calendar />
+            </Modal>
+          )}
         </div>
       </DatepickerContext.Provider>
     </>

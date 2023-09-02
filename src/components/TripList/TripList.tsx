@@ -1,5 +1,7 @@
 import { ITripList } from '../../types';
+
 import TripListItem from './TripListItem';
+
 export function TripList({ visibleTrips }: ITripList) {
   return (
     <ul>

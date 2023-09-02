@@ -2,6 +2,7 @@
 @import './css/font.css';
 @import './css/global.css';
 @import './css/app.css';
+@import './css/header.css';
 @import './css/addTripeFrom.css';
 @import './css/datePicker.css';
 @import './css/navigatoion.css';
@@ -10,3 +11,5 @@
 @import './css/filte.css';
 @import './css/tripPage.css';
 @import './css/tipAdd.css';
+@import './css/modal.css';
+@import './css/laderStyle/customloader.css';

@@ -1,42 +1,39 @@
-// import { Suspense } from 'react';
-// import { Route, Routes } from 'react-router-dom';
+import { Suspense } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import AddTripForm from 'components/Forms/AddTripForm';
 
-// import { Section } from './components/Section/Section';
-// import { Loader } from './components/Loader/Loader';
-// import HomePage from './Pages/HomePage';
-// import ErrorPage from './Pages/ErrorPage';
-// import LoginPage from './Pages/LoginPage';
-// import RegisterPage from './Pages/RegisterPage';
-// import TripsPage from './Pages/TripsPage';
-// import { DatePicker } from './components/DatePicker/DatePicker';
-// import CustomLoader from './components/CustomLoader/CustomLoader';
-import { useDayHendler } from './components/DatePicker/Calendar/DataHendler/DataHendler';
-// import routes from './routes';
+import { Section } from './components/Section/Section';
+
+import HomePage from './Pages/HomePage';
+import ErrorPage from './Pages/ErrorPage';
+import LoginPage from './Pages/LoginPage';
+import RegisterPage from './Pages/RegisterPage';
+import TripsPage from './Pages/TripsPage';
+import CustomLoader from './components/CustomLoader/CustomLoader';
+import routes from './routes';
 
 function App() {
-  const [onPrevDay, onNextDay, dayD, monthD, yearD] = useDayHendler('2023-01-01');
+  // const [onPrevDay, onNextDay, dayD, monthD, yearD] = useDayHendler('2023-01-01');
   return (
-    // <div className="app-container">{/* <CustomLoader /> */}</div>
-    <>
-      <div>{dayD}</div>
-      <div>{monthD}</div>
-      <div>{yearD}</div>
+    //   <CustomLoader />
+    //
+    // <>
+    //   <AddTripForm />
+    // </>
 
-      <button onClick={onPrevDay}>prev</button>
-      <button onClick={onNextDay}>next</button>
-    </>
-    // <DatePicker labelTex='start' />
-    //   <Suspense fallback={<Loader />}>
-    //     <Routes>
-    //       <Route path={routes.home} element={<Section />}>
-    //         <Route index element={<HomePage />} />
-    //         <Route path={routes.login} element={<LoginPage />} />
-    //         <Route path={routes.register} element={<RegisterPage />} />
-    //         <Route path={routes.trips} element={<TripsPage />} />
-    //         <Route path='*' element={<ErrorPage />} />
-    //       </Route>
-    //     </Routes>
-    //   </Suspense>
+    <div className="app-container ">
+      <Suspense fallback={<CustomLoader />}>
+        <Routes>
+          <Route path={routes.home} element={<Section />}>
+            <Route index element={<HomePage />} />
+            <Route path={routes.login} element={<LoginPage />} />
+            <Route path={routes.register} element={<RegisterPage />} />
+            <Route path={routes.trips} element={<TripsPage />} />
+            <Route path="*" element={<ErrorPage />} />
+          </Route>
+        </Routes>
+      </Suspense>
+    </div>
   );
 }
 

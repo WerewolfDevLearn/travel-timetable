@@ -6,5 +6,5 @@ export function AppHeader() {
   // const state = usePHBState();
   // const userName = state.user.profile.name;
   // userName ? <UserMenu userPhoto={userPhoto} /> :
-  return <header>{<Navigation />}</header>;
+  return <header className="app-header">{<Navigation />}</header>;
 }

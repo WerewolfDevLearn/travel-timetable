@@ -1,8 +1,66 @@
+.loaderContainer {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  color: #3edfb4;
+  display: flex;
+  justify-content: center;
+}
+.svg-container {
+  position: absolute;
+}
+/* .loaderContainer::after {
+  content: '';
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 5px;
+  height: 5px;
+  background-color: red;
+} */
+
 .layer01 {
+  fill: rgb(222, 217, 65);
+  position: relative;
+  top: -15px;
 }
 .layer02 {
+  fill: rgb(174, 170, 51);
+  position: relative;
+  top: -10px;
 }
 .layer03 {
+  fill: rgb(133, 130, 37);
+  position: relative;
+  top: -5px;
 }
 .layer04 {
+  fill: rgb(105, 102, 28);
+  position: relative;
+  top: 0px;
+}
+
+.animation-left {
+  animation-name: rotate;
+  animation-direction: normal;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.animation-right {
+  animation-name: rotate;
+  animation-direction: reverse;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

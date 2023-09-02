@@ -1,41 +1,72 @@
-.add-trip-form-heading {
-  border-bottom: 1px solid #8d8d8d;
-}
-
 .add-trip-form {
   width: 620px;
-  padding: 25px;
+  background-color: #ffffff;
+  box-shadow: 8px 9px 29px 0px #a1a1a1;
+}
+.add-trip-form-heading {
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 700;
+  padding: 18px;
+}
+.inputs-container {
+  border-bottom: 1px solid #d9d9d9;
+  border-top: 1px solid #d9d9d9;
+  padding: 64px 20px 84px 20px;
 }
 .add-trip-form-lable {
   font-family: 'Roboto';
+  display: block;
+  margin-bottom: 12px;
 }
-.add-trip-select {
-  width: 100%;
+.add-trip-form-lable::before {
+  content: '*';
+  color: red;
 }
-.add-trip-select option {
-  font-family: 'Roboto';
-}
-input[type='text'].date-input,
-input[type='date'].date-input {
-  border: 1px solid #8d8d8d;
-  padding: 0px;
-  width: 100%;
-}
-.input-decor-container {
+.select-decor {
   position: relative;
 }
-.input-decor-container::after {
-  content: '';
-  display: inline-block;
-  position: absolute;
-  top: 1px;
-  right: 2px;
-  width: 18px;
-  height: 18px;
-  background-color: #ffffff;
-  background-image: url('../assets/Calendar_icon_2.svg');
-  background-size: cover;
+.add-trip-select {
+  color: #d9d9d9;
+  appearance: none;
+  font-family: 'Roboto';
+  border: solid 1px #d9d9d9;
+  padding: 12px;
+  margin-bottom: 12px;
+  width: 100%;
+  border-radius: 2px;
 }
-.input-decor-container:hover .input-decor-container::after {
-  display: none;
+
+.button-wrapper {
+  padding: 18px 15px;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+.add-trip-form-button {
+  display: block;
+  padding: 10px 16px;
+  border-width: 1px;
+  border-radius: 2px;
+  border-color: #d9d9d9;
+  border-style: solid;
+  background-color: #ffffff;
+  transition-property: color, background-color, border-color;
+  transition-duration: 250ms;
+}
+.add-trip-form-button:hover,
+.add-trip-form-button:focus {
+  color: #ffffff;
+  background-color: #1683e8;
+  border-color: #1683e8;
+}
+.icon {
+  position: absolute;
+  right: 10px;
+  top: 13px;
+}
+.icon-selctor {
+  position: absolute;
+  right: 13px;
+  top: 17px;
 }

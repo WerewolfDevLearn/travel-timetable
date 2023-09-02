@@ -8,7 +8,7 @@ interface IProps {
 export default function CalendarBody({ year, month }: IProps) {
   const CurrMonthDaysNumbe = arrFill(year, month);
   return (
-    <ul className='month-dates'>
+    <ul className="month-dates">
       {CurrMonthDaysNumbe.map((day) => (
         <Day day={day} key={day.id} />
       ))}

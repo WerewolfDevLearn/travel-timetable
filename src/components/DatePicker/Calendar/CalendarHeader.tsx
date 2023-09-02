@@ -1,5 +1,5 @@
 import { weekDaysShort } from '../weeks';
-import { months } from '../mounthes';
+import { months } from '../monthes';
 
 interface IProps {
   year: number;
@@ -11,20 +11,20 @@ interface IProps {
 export default function CalendarHeader({ year, month, Prev, Next }: IProps) {
   return (
     <>
-      <div className='calendar-header'>
-        <button onClick={Prev} type='button'>
+      <div className="calendar-header">
+        <button onClick={Prev} type="button">
           Prev
         </button>
         <p>
           {months[month - 1]}/{year}
         </p>
-        <button onClick={Next} type='button'>
+        <button onClick={Next} type="button">
           Next
         </button>
       </div>
-      <ul className='weeks-day'>
+      <ul className="weeks-day">
         {weekDaysShort.map((weekDay) => (
-          <li key={weekDay} className='week-day'>
+          <li key={weekDay} className="week-day">
             {weekDay}
           </li>
         ))}
