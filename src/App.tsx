@@ -1,9 +1,9 @@
 import { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import AddTripForm from 'components/Forms/AddTripForm';
 
 import { Section } from './components/Section/Section';
-
+import PubliceRourtes from './components/Routes/PubliceRoutes';
+import PrivateRoutes from './components/Routes/PrivateRoutes';
 import HomePage from './Pages/HomePage';
 import ErrorPage from './Pages/ErrorPage';
 import LoginPage from './Pages/LoginPage';
@@ -13,22 +13,19 @@ import CustomLoader from './components/CustomLoader/CustomLoader';
 import routes from './routes';
 
 function App() {
-  // const [onPrevDay, onNextDay, dayD, monthD, yearD] = useDayHendler('2023-01-01');
   return (
-    //   <CustomLoader />
-    //
-    // <>
-    //   <AddTripForm />
-    // </>
-
     <div className="app-container ">
       <Suspense fallback={<CustomLoader />}>
         <Routes>
           <Route path={routes.home} element={<Section />}>
-            <Route index element={<HomePage />} />
-            <Route path={routes.login} element={<LoginPage />} />
-            <Route path={routes.register} element={<RegisterPage />} />
-            <Route path={routes.trips} element={<TripsPage />} />
+            <Route element={<PubliceRourtes />}>
+              <Route index element={<HomePage />} />
+              <Route path={routes.login} element={<LoginPage />} />
+              <Route path={routes.register} element={<RegisterPage />} />
+            </Route>
+            <Route element={<PrivateRoutes />}>
+              <Route path={routes.trips} element={<TripsPage />} />
+            </Route>
             <Route path="*" element={<ErrorPage />} />
           </Route>
         </Routes>

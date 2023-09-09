@@ -39,7 +39,7 @@
         "endOfLine": "auto",
         "singleQuote": true,
         "jsxSingleQuote": false,
-        "trailingComma": "all"
+        "trailingComma": "es5"
       }
     ],
     "quotes": ["error", "single"],

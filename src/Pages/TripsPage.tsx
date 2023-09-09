@@ -15,9 +15,11 @@ export default function TripsPage() {
   const [open, setOpen] = useState<boolean>(false);
   const onClose = () => {
     setOpen(false);
+    document.body.style.overflow = 'auto';
   };
   const onOpen = () => {
     setOpen(true);
+    document.body.style.overflow = 'hidden';
   };
   const filter = '';
   const items: ITrip[] | [] = [];

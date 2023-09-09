@@ -6,12 +6,13 @@ export interface ITrip {
   imageLink: string;
   imageDescription: string;
   cityName: string;
-  dataIn: string;
-  dataOut: string;
+  dateIn: string;
+  dateOut: string;
 }
 export interface ITripList {
   visibleTrips: ITrip[];
 }
+export type ITripReq = Pick<ITrip, 'cityName' | 'dateIn' | 'dateOut'>;
 
 export interface ITripProps {
   trip: ITrip;
@@ -28,10 +29,20 @@ export interface IDay {
 export interface IDayProps {
   day: IDay;
 }
-export interface ILogin {
+
+export interface IRegister {
+  name: string;
   email: string;
   password: string;
 }
+export type ILogin = Pick<IRegister, 'email' | 'password'>;
+
+export interface IUser {
+  name: string;
+  email: string;
+  token: string;
+}
+
 export interface ModaLProps {
   onCloseModal(): void;
   children: JSX.Element[] | JSX.Element;

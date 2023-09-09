@@ -30,7 +30,7 @@ export default function Modal({ onCloseModal, children }: ModaLProps): JSX.Eleme
       tabIndex={0}
       ref={overlayRef}
     >
-      <div>{children}</div>
+      {children}
     </div>,
     portalElem
   );

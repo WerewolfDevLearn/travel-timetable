@@ -1,11 +1,11 @@
 import axios from 'axios';
 
-import { ILogin } from '../types';
+import { ILogin, IRegister } from '../types';
 
-axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
+axios.defaults.baseURL = 'http://localhost:3001/api/';
 
-export async function userRegister(userData: ILogin) {
-  const response = await axios.post('/users/signup', userData);
+export async function userRegister(userData: IRegister) {
+  const response = await axios.post('/users/register', userData);
   return response.data;
 }
 export async function userLogin(loginData: ILogin) {
@@ -13,7 +13,8 @@ export async function userLogin(loginData: ILogin) {
   const data = response.data;
   return data;
 }
-export async function userLogOut() {
+export async function userLogOut(tokenAuth: string) {
+  axios.defaults.headers.common.Authorization = `Bearer ${tokenAuth}`;
   const response = await axios.post('/users/logout');
   const data = response.data;
   return data;
@@ -31,5 +32,5 @@ export const token = {
   },
   unset() {
     axios.defaults.headers.common.Authorization = '';
-  }
+  },
 };
